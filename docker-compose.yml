@@ -1,0 +1,47 @@
+version: "3.9"
+
+services:
+
+  static:
+    image: nginx
+    container_name: static
+    restart: unless-stopped
+    ports:
+      - "${STATIC_PORT:-8080}:80"
+    volumes:
+      - ./static:/usr/share/nginx/:ro
+      - ./docker/static:/etc/nginx/conf.d/:ro
+
+  db:
+    image: postgres
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - db:/var/lib/postgresql/data
+      - ./docker/db:/docker-entrypoint-initdb.d:ro
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    restart: unless-stopped
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=pgadmin@edu-python-course.org
+      - PGADMIN_DEFAULT_PASSWORD=pgadmin
+      - PGADMIN_CONFIG_SERVERMODE=False
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+      - ./docker/pgadmin/servers.json:/pgadmin4/servers.json:ro
+    depends_on:
+      - db
+    links:
+      - "db:postgresql-server"
+
+volumes:
+  db:
+  pgadmin:

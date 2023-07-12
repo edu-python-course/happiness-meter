@@ -1,0 +1,13 @@
+{
+  "Servers": {
+    "docker": {
+      "Name": "PostgresSQL Server",
+      "Group": "Docker Compose",
+      "Port": 5432,
+      "Username": "postgres",
+      "Host": "postgresql-server",
+      "SSLMode": "prefer",
+      "MaintenanceDB": "postgres"
+    }
+  }
+}

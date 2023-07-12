@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "django-template"
+version = "1.0.1"
+description = "the django training project template"
+authors = ["Serhii Horodilov <sgorodil@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "django_template"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^4.2.2"
+psycopg2-binary = "^2.9.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>NGINX Server</title>
+  <style>
+      body {
+          padding: 5rem 10rem 5rem 5rem;
+      }
+
+      * {
+          font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+      }
+
+      h1 {
+          text-align: center;
+      }
+
+      p {
+          margin-top: 1.5rem;
+      }
+
+  </style>
+</head>
+<body>
+<h1>Static Container</h1>
+<div>
+  <p>This is a static content storage accessible via HTTP.</p>
+  <p>Any file added to <i>static</i> directory will appear here. For example the URL for current file is:
+    <a href="">http://localhost:8080/index.html</a>.
+  </p>
+  <p>If there is a file named <i>example.png</i> located in <i>img</i> directory, so its path is:
+    <i>img/example.png</i> relative to the <i>static</i> root, it will be available at:
+    <i>http://localhost:8080/img/example.png</i>
+  </p>
+  <p>Note, that <i>static</i> directory content is excluded from the repo. You need to adjust
+    <strong>.gitignore file</strong> to change this behavior.
+  </p>
+</div>
+</body>
+</html>
