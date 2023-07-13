@@ -28,6 +28,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    "members.apps.MembersAppConfig",
+    "reports.apps.ReportsAppConfig",
 ]
 
 MIDDLEWARE = [
@@ -84,6 +87,8 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
+
+AUTH_USER_MODEL = "members.MemberModel"
 
 AUTH_PASSWORD_VALIDATORS = []
 
