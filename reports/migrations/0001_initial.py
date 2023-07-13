@@ -3,7 +3,7 @@ import django.db.models.deletion
 from django.conf import settings
 from django.db import migrations, models
 
-import reports.services
+import reports.utils
 
 
 class Migration(migrations.Migration):
@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
                  models.BigAutoField(auto_created=True, primary_key=True,
                                      serialize=False, verbose_name="ID")),
                 ("reported_on",
-                 models.DateField(default=reports.services.get_today,
+                 models.DateField(default=reports.utils.get_today,
                                   editable=False)),
                 ("level", models.IntegerField(
                     choices=[(1, "Joy"), (2, "Excitement"), (3, "Gratitude"),

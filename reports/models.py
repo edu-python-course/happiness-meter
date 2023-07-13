@@ -6,7 +6,7 @@ from django.contrib.auth import get_user_model
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
-from reports.services import get_today
+from reports.utils import get_today
 
 
 class HappinessReportModel(models.Model):
