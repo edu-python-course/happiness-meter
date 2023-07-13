@@ -12,8 +12,8 @@ from reports.models import HappinessReportModel
 class HappinessReportModelAdmin(admin.ModelAdmin):
     """Happiness report model admin site"""
 
-    list_display = "reporter", "level", "reported_on", "get_team"
-    list_filter = "reported_on", "reporter__team"
+    list_display = "level", "reporter", "reported_on", "get_team"
+    list_filter = "reported_on", "reporter__team", "level"
     ordering = "-reported_on", "reporter__team"
 
     # happiness reports can not be added, changed or deleted from admin site

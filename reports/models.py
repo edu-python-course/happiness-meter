@@ -53,4 +53,4 @@ class HappinessReportModel(models.Model):
     def __str__(self) -> str:
         """Return a string version of an instance"""
 
-        return f"{self.reporter} reported {self.level} on {self.reported_on}"
+        return f"{self.get_level_display()} ({self.level})"
