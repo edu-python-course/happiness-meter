@@ -4,7 +4,7 @@
 
 The Happiness Application is a Django RestFul application designed to monitor
 the happiness levels of teams and team members. It allows users to join teams
-or leave team their are already members. Also it provide a functionality to
+or leave team they are already members. Also, it provides a functionality to
 report **happiness level** once per day for each user. These datas are used
 to gather the statistics on an average **happiness level** for all teams, per
 team or per a single user.
@@ -35,7 +35,7 @@ Teams management
 -   Only admin users can create, update or delete teams.
     Both API endpoint(s) and admin site can be used for this.
 -   Authenticated users can retrieve an average happiness level for a team
-    their are assigned to for a current date.
+    they are assigned to for a current date.
 -   Authenticated users can retrieve statistics for
 -   Anonymous users or none-team members can retrieve an average happiness
     level for all registered teams.
@@ -56,3 +56,17 @@ Happiness level is an integer number from 1 to 10 inclusively.
 -   Team members can retrieve an average happiness level per their team.
 -   Authenticated and unauthenticated users can get an average happiness level
     per all teams.
+
+************
+UML diagrams
+************
+
+Data models
+===========
+
+-   User has ``0+`` reports. But a report entity always has its reporter.
+-   Team can store ``0+`` users. A user is a member of a single team or none
+    team.
+
+.. mermaid:: ./models.md
+    :align: center
