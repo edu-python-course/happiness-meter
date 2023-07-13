@@ -2,18 +2,40 @@
 Reports application services
 """
 
-import datetime
+from django.db.models import Avg, F, QuerySet, Window
+from django.db.models.functions import Lag, Round
 
-from django.utils import timezone
-
-
-def get_today() -> datetime.date:
-    """Return current date"""
-
-    return timezone.now().date()
+from members.models import TeamModel
+from reports.models import HappinessReportModel
 
 
-def get_date_before(days: int) -> datetime.date:
-    """Return date the specified number of days before today"""
+def get_annotated_teams_reports() -> QuerySet:
+    """Return an annotated query set with average happiness level"""
 
-    return get_today() - timezone.timedelta(days=days)
+    return \
+        HappinessReportModel.objects.filter(
+            reporter__team__isnull=False
+        ).order_by(
+            "-reported_on",
+            F("reporter__team__name")
+        ).annotate(
+            date=F("reported_on"),
+            team=F("reporter__team__name")
+        ).values(
+            "date",
+            "team"
+        ).annotate(
+            level=Round(Avg("level")),
+        ).annotate(
+            prev=Window(
+                expression=Lag("level"),
+                partition_by="reporter__team",
+                order_by="-reported_on"
+            )
+        )
+
+
+def get_annotated_team_reports(team: TeamModel) -> QuerySet:
+    """Return an annotated query set for a specific team"""
+
+    return get_annotated_teams_reports().filter(team=team)
