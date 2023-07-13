@@ -13,5 +13,7 @@ def get_today() -> datetime.date:
     return timezone.now().date()
 
 
-def get_date_by_days_delta(days: int) -> datetime.date:
+def get_date_before(days: int) -> datetime.date:
+    """Return date the specified number of days before today"""
+
     return get_today() - timezone.timedelta(days=days)

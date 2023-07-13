@@ -9,7 +9,7 @@ from django.db.utils import IntegrityError
 
 from members.services import get_available_reporters
 from reports.models import HappinessReportModel
-from reports.services import get_date_by_days_delta as get_date
+from reports.services import get_date_before as get_date
 
 
 class Command(BaseCommand):
