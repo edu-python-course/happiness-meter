@@ -15,6 +15,9 @@ def get_annotated_teams_reports() -> QuerySet:
     return \
         HappinessReportModel.objects.filter(
             reporter__team__isnull=False
+        ).order_by(
+            "-reported_on",
+            F("reporter__team__name")
         ).annotate(
             date=F("reported_on"),
             team=F("reporter__team__name")
