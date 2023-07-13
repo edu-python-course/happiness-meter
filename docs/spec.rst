@@ -70,3 +70,11 @@ Data models
 
 .. mermaid:: ./models.md
     :align: center
+
+*******************
+Future improvements
+*******************
+
+-   Implement a service to notify members to report their happiness level
+    on timer.
+-   Implement a real-time view to show changes of teams' happiness level.
