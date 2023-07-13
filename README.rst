@@ -31,8 +31,32 @@ Getting started
 
             poetry install
 
+#.  Set up environment variables.
+
 .. _pip: https://pip.pypa.io/
 .. _poetry: https://python-poetry.org/
+
+Environment variables
+=====================
+
+This project relays on some environment variables. You can set them up using:
+
+.. code-block::
+
+    SET VARIABLE=value     # for Windows users
+    EXPORT VARIABLE=value  # for Unix users (Linux and MacOS)
+
+:``DJANGO_SECRET_KEY``:
+    Set up ``SECRET_KEY`` variable. In Django it is used for cryptographic
+    signing, that is, to generate hashes and tokens
+:``PGHOST``:
+    PostgreSQL server host. Defaults to ``"localhost"``.
+:``PGPORT``:
+    PostgreSQL server port. Defaults to ``"5432"``.
+:``PGUSER``:
+    PostgreSQL username to use within a Django project.
+:``PGPASSWORD``:
+    PostgreSQL user's password to log in.
 
 Using Docker Compose
 ====================
