@@ -2,8 +2,8 @@
 Reports application services
 """
 
-from django.db.models import Avg, F, QuerySet
-from django.db.models.functions import Round
+from django.db.models import Avg, F, QuerySet, Window
+from django.db.models.functions import Lag, Round
 
 from members.models import TeamModel
 from reports.models import HappinessReportModel
@@ -25,7 +25,13 @@ def get_annotated_teams_reports() -> QuerySet:
             "date",
             "team"
         ).annotate(
-            level=Round(Avg("level"))
+            level=Round(Avg("level")),
+        ).annotate(
+            prev=Window(
+                expression=Lag("level"),
+                partition_by="reporter__team",
+                order_by="-reported_on"
+            )
         )
 
 
