@@ -47,7 +47,6 @@ class TeamModelAdmin(admin.ModelAdmin):
     """Team model admin site"""
 
     list_display = "name", "get_members_count"
-    ordering = "name",
 
     @admin.display(description="members")
     def get_members_count(self, obj: models.TeamModel) -> int:

@@ -30,6 +30,7 @@ class MemberModel(AbstractUser):
         verbose_name = "member"
         verbose_name_plural = "members"
         default_related_name = "members"
+        ordering = "first_name", "last_name"
 
     team = models.ForeignKey(TeamModel, on_delete=models.SET_NULL,
                              null=True, blank=True,
