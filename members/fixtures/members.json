@@ -1,0 +1,211 @@
+[
+  {
+    "model": "members.membermodel",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$FwObr9nefeNTFW3ruSa4Gb$w3yzCZ6lKg6r3Se9VPqPApGbwMIbwk7uMuskli3oFEI=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@edu-python-course.org",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-06-21T21:35:22.621Z",
+      "team": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "members.membermodel",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$INYANFaOapBZVPLEF1SmX1$OSJKHZaxAfFzFK6F3idilciCdEXyXMoqi6K+j8mTX4c=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "mostion",
+      "first_name": "Rudolph",
+      "last_name": "Hayward",
+      "email": "rudolphhayward@rhyta.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-21T21:37:04.945Z",
+      "team": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "members.membermodel",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$G7xZuJ2JZnEOJeUUGNKeLq$C8mG/e3QOZqjSH7fS/VDl1xbEaHlLjLYePcyzbRRc5Q=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "parom1998",
+      "first_name": "Berilac",
+      "last_name": "Gardner",
+      "email": "berilacgardner@armyspy.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-06-21T21:37:21.483Z",
+      "team": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "members.membermodel",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$UyxstNSVMJfcBBhvPNYgzT$hjfIQ4c8B/zMBhq17yYokPQVyhASVMIC487Z6udbkLo=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "ationestreen",
+      "first_name": "Lalia",
+      "last_name": "Whitfoot",
+      "email": "laliawhitfoot@teleworm.us",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2023-06-21T21:37:39.047Z",
+      "team": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "members.membermodel",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$2ofEOMU9OV1R6cH9Hponca$togXQdOgWnh05ZcVNWa8YoCOESWbcFeDuLqfRwgSt9I=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "lecladmands",
+      "first_name": "Bildad",
+      "last_name": "Burrows",
+      "email": "bildadburrows@dayrep.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-21T21:38:06.038Z",
+      "team": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "members.membermodel",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$5ZAUulUuryvTjMDYGJsLl6$ALx9IcAQjTSqAmxjyD+3gotXhFgOepKAv/X9khO972g=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "butime",
+      "first_name": "Wilcome",
+      "last_name": "Brownlock",
+      "email": "wilcomebrownlock@teleworm.us",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-21T21:38:26.986Z",
+      "team": 2,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "members.membermodel",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$ZuGDZUbYdIzyuTdUYHKjhD$fUJ2VX98HtRpll2H6vYUaV/1Fs7l4Ty3ulTVp7rJeYw=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "wheed1997",
+      "first_name": "Pippin",
+      "last_name": "Sackville-Baggins",
+      "email": "pippinsackville-baggins@jourrapide.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-21T21:38:41.371Z",
+      "team": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "members.membermodel",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$jETyjp2wsfEgm95e13onGz$m7oLaks6KNEyx9SaBgyYa3iXevZ0st15UNjnz7MtIdo=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "prombery87",
+      "first_name": "Dora",
+      "last_name": "Headstrong",
+      "email": "doraheadstrong@dayrep.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-21T21:38:52.579Z",
+      "team": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "members.membermodel",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$dQ6WT9hE21mvED79kU3cQi$xIIHnAcVVDQJ4w+OahGdkz7hZKNWANKQAi0PwKWH2IE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "acen1999",
+      "first_name": "Toby",
+      "last_name": "Mugwort",
+      "email": "tobymugwort@armyspy.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-21T21:39:07.554Z",
+      "team": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "members.membermodel",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$nllTn9aHqU1FyTZzxErzNZ$4tHF/ATs7WAZBpAkJ8ZEUdf7g/rCw6FylH9ItWOP91Q=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "welitted",
+      "first_name": "Amaranth",
+      "last_name": "Burrowes",
+      "email": "amaranthburrowes@dayrep.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-21T21:39:18.739Z",
+      "team": 2,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "members.membermodel",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$kmz4HPoHB1O4SjiB9lSNex$9Wy9IH+w+yzQ+P/cglqyvLCFeC644/WF80IvP6kBf9c=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "groply",
+      "first_name": "Chica",
+      "last_name": "Brockhouse",
+      "email": "chicabrockhouse@teleworm.us",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-21T21:39:30.062Z",
+      "team": 3,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
