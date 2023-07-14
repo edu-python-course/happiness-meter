@@ -19,7 +19,6 @@ def get_annotated_teams_reports() -> QuerySet:
             F("reporter__team__name"),
         ).annotate(
             date=F("reported_on"),
-            team_id=F("reporter__team_id"),
             team=F("reporter__team__name")
         ).values(
             "date",
@@ -27,6 +26,7 @@ def get_annotated_teams_reports() -> QuerySet:
         ).annotate(
             level=Round(Avg("level")),
         ).annotate(
+            team_id=F("reporter__team_id"),
             prev=Window(
                 expression=Lag("level"),
                 partition_by="reporter__team",
