@@ -16,5 +16,10 @@ urlpatterns = [
         "teams/<team_id>/reports/",
         resources.AnnotatedHappinessReportTeamListAPIView.as_view(),
         name="reports-team"
+    ),
+    path(
+        "reports/",
+        resources.HappinessReportListCreateAPIView.as_view(),
+        name="reports"
     )
 ]
