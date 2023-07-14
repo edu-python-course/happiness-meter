@@ -5,7 +5,6 @@ Reports application services
 from django.db.models import Avg, F, QuerySet, Window
 from django.db.models.functions import Lag, Round
 
-from members.models import TeamModel
 from reports.models import HappinessReportModel
 
 
@@ -17,9 +16,10 @@ def get_annotated_teams_reports() -> QuerySet:
             reporter__team__isnull=False
         ).order_by(
             "-reported_on",
-            F("reporter__team__name")
+            F("reporter__team__name"),
         ).annotate(
             date=F("reported_on"),
+            team_id=F("reporter__team_id"),
             team=F("reporter__team__name")
         ).values(
             "date",
@@ -30,12 +30,6 @@ def get_annotated_teams_reports() -> QuerySet:
             prev=Window(
                 expression=Lag("level"),
                 partition_by="reporter__team",
-                order_by="-reported_on"
+                order_by="reported_on"
             )
         )
-
-
-def get_annotated_team_reports(team: TeamModel) -> QuerySet:
-    """Return an annotated query set for a specific team"""
-
-    return get_annotated_teams_reports().filter(team=team)
