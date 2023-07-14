@@ -19,9 +19,10 @@ class AnnotatedHappinessReportSerializer(serializers.Serializer):
     """Annotated happiness reports serializer"""
 
     date = serializers.DateField()
+    team_id = serializers.IntegerField()
     team = serializers.CharField()
-    level = serializers.FloatField()
-    prev = serializers.FloatField()
+    avg = serializers.FloatField(source="level")
+    avg_prev = serializers.FloatField(source="prev")
 
     def create(self, validated_data):
         raise NotImplementedError("Operation is restricted")

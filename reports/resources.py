@@ -22,4 +22,4 @@ class AnnotatedHappinessReportTeamListAPIView(ListAPIView):
     def get_queryset(self):
         team = get_object_or_404(TeamModel.objects.all(),
                                  pk=self.kwargs["team_id"])
-        return services.get_annotated_team_reports(team)
+        return services.get_annotated_teams_reports().filter(team=team)
